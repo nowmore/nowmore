@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/_netty/_netty.iml" filepath="$PROJECT_DIR$/_netty/_netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_netty/echo/echo.iml" filepath="$PROJECT_DIR$/_netty/echo/echo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_netty/spdy/spdy.iml" filepath="$PROJECT_DIR$/_netty/spdy/spdy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_netty/websocket/websocket.iml" filepath="$PROJECT_DIR$/_netty/websocket/websocket.iml" />
+    </modules>
+  </component>
+</project>
