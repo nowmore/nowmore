@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/_netty/_netty.iml" filepath="$PROJECT_DIR$/_netty/_netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_netty/codec/codec.iml" filepath="$PROJECT_DIR$/_netty/codec/codec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/_netty/echo/echo.iml" filepath="$PROJECT_DIR$/_netty/echo/echo.iml" />
       <module fileurl="file://$PROJECT_DIR$/_netty/spdy/spdy.iml" filepath="$PROJECT_DIR$/_netty/spdy/spdy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_netty/upd/upd.iml" filepath="$PROJECT_DIR$/_netty/upd/upd.iml" />
       <module fileurl="file://$PROJECT_DIR$/_netty/websocket/websocket.iml" filepath="$PROJECT_DIR$/_netty/websocket/websocket.iml" />
     </modules>
   </component>

@@ -32,10 +32,10 @@ public class SecureApp extends app {
 
         try {
             KeyStore ks = KeyStore.getInstance("JKS");
-            InputStream ins = new FileInputStream("/home/x/app/etc/t.jks");
+            InputStream ins = new FileInputStream("/home/x/.local/share/mkcert/rootCA.jks");
             ks.load(ins, "123456".toCharArray());
             KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-            keyManagerFactory.init(ks, "654321".toCharArray());
+            keyManagerFactory.init(ks, "123456".toCharArray());
             SSLContext sslContext = SSLContext.getInstance("TLS");
             sslContext.init(keyManagerFactory.getKeyManagers(), null, null);
             final SecureApp a = new SecureApp(sslContext);

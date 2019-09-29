@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+import io.netty.channel.ChannelHandler;
 
-public class SpdyRequestHandler {
+@ChannelHandler.Sharable
+public class SpdyRequestHandler extends HttpRequestHandler {
+
+    @Override
+    protected String getContent() {
+        return "This content is transmitted via SPDY\r\n";
+    }
 }

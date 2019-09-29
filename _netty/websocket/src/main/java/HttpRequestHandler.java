@@ -25,23 +25,23 @@ public class HttpRequestHandler extends SimpleChannelInboundHandler<FullHttpRequ
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest req) throws Exception {
-        if(uri.equalsIgnoreCase(req.uri())) {
+        if(uri.equalsIgnoreCase(req.getUri())) {
             ctx.fireChannelRead(req.retain());
         } else {
-            if(HttpUtil.is100ContinueExpected(req)) {
+            if(HttpHeaders.is100ContinueExpected(req)) {
                 send100Continue(ctx);
             }
 
             RandomAccessFile file = new RandomAccessFile(INDEX, "r");
 
-            HttpResponse rsp = new DefaultHttpResponse(req.protocolVersion(), HttpResponseStatus.OK);
-            rsp.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html; charset=UTF-8");
+            HttpResponse rsp = new DefaultHttpResponse(req.getProtocolVersion(), HttpResponseStatus.OK);
+            rsp.headers().set(HttpHeaders.Names.CONTENT_TYPE, "text/html; charset=UTF-8");
 
-            boolean keepAlive = HttpUtil.isKeepAlive(req);
+            boolean keepAlive = HttpHeaders.isKeepAlive(req);
 
             if(keepAlive) {
-                rsp.headers().set(HttpHeaderNames.CONTENT_LENGTH, file.length());
-                rsp.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);
+                rsp.headers().set(HttpHeaders.Names.CONTENT_LENGTH, file.length());
+                rsp.headers().set(HttpHeaders.Names.CONNECTION, HttpHeaders.Values.KEEP_ALIVE);
             }
 
             ctx.write(rsp);

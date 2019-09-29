@@ -6,16 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spdy" />
-        <module name="echo" />
         <module name="websocket" />
+        <module name="codec" />
+        <module name="upd" />
+        <module name="echo" />
+        <module name="spdy" />
+        <module name="designpattern" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="_netty" target="1.5" />
-      <module name="echo" target="1.5" />
-      <module name="spdy" target="1.5" />
-      <module name="websocket" target="1.5" />
+      <module name="_netty" target="1.8" />
+      <module name="codec" target="1.8" />
+      <module name="designpattern" target="1.8" />
+      <module name="echo" target="1.8" />
+      <module name="spdy" target="8" />
+      <module name="upd" target="6" />
+      <module name="websocket" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
