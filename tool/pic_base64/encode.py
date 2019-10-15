@@ -14,4 +14,4 @@ if __name__ == "__main__":
 
     with open(argv[1], 'rb') as pic:
         data = base64.b64encode(pic.read())
-        print('data:image/jpeg;base,%s' % data.decode())
+        print('data:image/jpeg;base,%s' % data)
